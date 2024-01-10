@@ -5,13 +5,19 @@ import './App.css';
 function Form() {
 
     let [people, setPeople] = React.useState([])
-    let [fn, SetFn] = React.useState('')
-    let [ln, SetLn] = React.useState('')
-    let [age, SetAge] = React.useState('')
-    let [city, SetCity] = React.useState('')
-    let [gender, SetGender] = React.useState('')
-    let [courses, SetCourses] = React.useState([])
-    var temp;
+    // let [fn, SetFn] = React.useState('')
+    // let [ln, SetLn] = React.useState('')
+    // let [age, SetAge] = React.useState('')
+    // let [city, SetCity] = React.useState('')
+    // let [gender, SetGender] = React.useState('')
+    // let [courses, SetCourses] = React.useState([])
+    // var temp;
+    Reffn = React.useRef('') 
+    Refln = React.useRef('') 
+    Refage = React.useRef('') 
+    Refcity = React.useRef('') 
+    Refgender = React.useRef('') 
+    Refcourse = React.useRef([]) 
 
     const save = () => {
         let personObj = {
@@ -38,9 +44,9 @@ function Form() {
             })
             SetCourses([...temp])
         }
-
-
     }
+
+    console.log(Reffn);
 
     return (
         <div className="border bg-light">
@@ -51,19 +57,19 @@ function Form() {
 
                     <div>
                         <label htmlFor="fn">FirstName:</label>
-                        <input className='form-control' onKeyUp={(e) => { SetFn(e.target.value) }} type="text" id="fn" />
+                        <input className='form-control' ref = {reffn} type="text" id="fn" />
                     </div>
                     <div>
                         <label htmlFor="ln">LastName:</label>
-                        <input className='form-control' onKeyUp={(e) => { SetLn(e.target.value) }} type="text" id="ln" />
+                        <input className='form-control' ref = {refln} type="text" id="ln" />
                     </div>
                     <div>
                         <label htmlFor="age">Age:</label>
-                        <input className='form-control' onKeyUp={(e) => { SetAge(e.target.value) }} type="text" id="age" />
+                        <input className='form-control' ref={Refage} type="text" id="age" />
                     </div>
                     <div>
                         <label htmlFor="city">City:</label>
-                        <input className='form-control' onKeyUp={(e) => { SetCity(e.target.value) }} type="text" id="city" />
+                        <input className='form-control' ref={Refcity} type="text" id="city" />
                     </div>
                     <div>
                         <p>Gender:</p>
