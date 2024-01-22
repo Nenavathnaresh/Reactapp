@@ -11,33 +11,50 @@ import {
 import Home from './Home';
 import ContactUs from './ContactUs';
 import About from './About';
+import Products from './Product';
+import Software from './Software';
+import Hardware from './Hardware';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    children:[
-      {
-        path: '/home',
-        element: <Home></Home>
-      },
-      {
-        path: '/contact',
-        element: <ContactUs></ContactUs>
-      },
-      {
-        path: '/about',
-        element: <About></About>
-      },
-    ]
   },
+  {
+    path: '/home',
+    element: <Home></Home>
+  },
+  {
+    path: '/contact',
+    element: <ContactUs></ContactUs>
+  },
+  {
+    path: '/about',
+    element: <About></About>
+  },
+  {
+    path: '/products',
+    element: <Products></Products>,
+    children: [
+      {
+        path: 'software',
+        element: <Software></Software>
+      },
+      {
+        path: 'hardware',
+        element: <Hardware></Hardware>
+      }
+    ]
+  }
+
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-     <RouterProvider router={router} />
-  </React.StrictMode>
+  
+    <RouterProvider router={router} />
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
