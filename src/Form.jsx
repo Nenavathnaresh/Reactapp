@@ -1,122 +1,48 @@
-import React from "react";
-import Tbody from "./Tbody";
-import './App.css';
+import React, { useEffect } from "react";
 
-function Form() {
+function Form(){
+    let fnRef = React.useRef('')
+    let lnRef = React.useRef('')
+    let ageRef = React.useRef('')
+    let cityRef = React.useRef('')
 
-    let [people, setPeople] = React.useState([])
-    // let [fn, SetFn] = React.useState('')
-    // let [ln, SetLn] = React.useState('')
-    // let [age, SetAge] = React.useState('')
-    // let [city, SetCity] = React.useState('')
-    // let [gender, SetGender] = React.useState('')
-    // let [courses, SetCourses] = React.useState([])
-    // var temp;
-    Reffn = React.useRef('') 
-    Refln = React.useRef('') 
-    Refage = React.useRef('') 
-    Refcity = React.useRef('') 
-    Refgender = React.useRef('') 
-    Refcourse = React.useRef([]) 
-
-    const save = () => {
-        let personObj = {
-            firstname: fn,
-            lastname: ln,
-            age: age,
-            city: city,
-            gender: gender,
-            courses: courses
-        }
-
-        setPeople([...people, personObj])
-    }
-
-    const courseFn = (e) => {
-        if (e.target.checked) {
-            SetCourses([...courses, e.target.value])
-        }
-        else {
-            var temp = courses.filter((course) => {
-                return (
-                    course !== e.target.value
-                )
-            })
-            SetCourses([...temp])
+    const print = ()=>{
+        var student = {
+            firstname:fnRef.current.value,
+            lastname:lnRef.current.value,
+            age:ageRef.current.value,
+            city:cityRef.current.value
         }
     }
 
-    console.log(Reffn);
+    useEffect(()=>{
+        fnRef.current.focus()
+    },[])
 
-    return (
-        <div className="border bg-light">
-            <h1 className="text-center head border p-2">Edupoly</h1>
-            <div className="d-flex flex-wrap container ">
+    const focusNext = (e)=>{
+        if(e.key === 'Enter')
+        lnRef.current.focus()   
+    }
 
-                <div className="border p-3 form-group w-50">
+    const focusAge = (e)=>{
+        if(e.key === 'Enter')
+        ageRef.current.focus()
+       
+    }
 
-                    <div>
-                        <label htmlFor="fn">FirstName:</label>
-                        <input className='form-control' ref = {reffn} type="text" id="fn" />
-                    </div>
-                    <div>
-                        <label htmlFor="ln">LastName:</label>
-                        <input className='form-control' ref = {refln} type="text" id="ln" />
-                    </div>
-                    <div>
-                        <label htmlFor="age">Age:</label>
-                        <input className='form-control' ref={Refage} type="text" id="age" />
-                    </div>
-                    <div>
-                        <label htmlFor="city">City:</label>
-                        <input className='form-control' ref={Refcity} type="text" id="city" />
-                    </div>
-                    <div>
-                        <p>Gender:</p>
-                        <input className='form-check-input' type="radio" name="gender" value='male' onChange={(e) => { SetGender(e.target.value) }} />
-                        <label className='form-check-label' htmlFor="">Male</label>
-                        <input className='form-check-input' type="radio" name="gender" value='female' onChange={(e) => { SetGender(e.target.value) }} />
-                        <label className='form-check-label' htmlFor="">Female</label>
-                    </div>
-                    <div>
-                        <p>Courses:</p>
-                        <input type="checkbox" value='html' name="" id="" onChange={(e) => { courseFn(e) }} />
-                        <label htmlFor="">HTML</label>
-                        <input type="checkbox" value='css' name="" id="" onChange={(e) => { courseFn(e) }} />
-                        <label htmlFor="">CSS</label>
-                        <input type="checkbox" value='javascript' name="" id="" onChange={(e) => { courseFn(e) }} />
-                        <label htmlFor="">JavaScript</label>
-                        <input type="checkbox" value='python' name="" id="" onChange={(e) => { courseFn(e) }} />
-                        <label htmlFor="">Python</label>
-                        <input type="checkbox" value='react.js' name="" id="" onChange={(e) => { courseFn(e) }} />
-                        <label htmlFor="">React.JS</label>
-                    </div>
-                    <button className="btn bg-info w-100 mt-2" onClick={() => { save() }}>Save</button>
-                </div>
-                <div className="w-50">
-                    <table className="table table-dark table-hover">
-                        <thead>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                                <th>City</th>
-                                <th>Gender</th>
-                                <th>Courses</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                people.map((person, index) => {
-                                    return (
-                                        <Tbody person={person}></Tbody>
-                                    )
-                                })
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    const focusCity = (e)=>{
+        if(e.key === 'Enter')
+        cityRef.current.focus()
+    }
+
+
+    return(
+        <div>
+            Firstname:<input type="text" ref = {fnRef} onKeyUp={(e)=>{focusNext(e)}} />
+            LastName:<input type="text" ref = {lnRef} onKeyUp={(e)=>{focusAge(e)}} name="" id="" />
+            Age:<input type="text" ref = {ageRef} onKeyUp={(e)=>{focusCity(e)}} name="" id="" />
+            City<input type="text" ref = {cityRef} name="" id="" />
+            <button onClick={print}>Save</button>
         </div>
     )
 }
