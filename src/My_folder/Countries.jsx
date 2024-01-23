@@ -19,7 +19,7 @@ function Countries() {
                 countries.map((c) => {
                     return (
                         <li>
-                            <Link to='countrydet' state={c}> {c.name.common}</Link>
+                            <Link to={`countrydet/${c.cca2}`}> {c.name.common}</Link>
 
                         </li>
                     )

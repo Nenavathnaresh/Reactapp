@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Countries></Countries>,
         children:[
           {
-            path: "countrydet",
+            path: "countrydet/:cname",
             element: <Countriesdetails></Countriesdetails>,
           },
         ]
