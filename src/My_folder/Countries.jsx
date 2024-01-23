@@ -1,10 +1,10 @@
 import axios from "axios";
 import React from "react";
 import Countriesdetails from "./Countriesdetails";
+import { Link, Outlet } from "react-router-dom";
 
 function Countries() {
     let [countries, SetCountries] = React.useState([])
-    let [countriesdetails, setCountriesdetails] = React.useState([])
 
     React.useEffect(() => {
         axios.get('https://restcountries.com/v3.1/all').then((res) => {
@@ -13,25 +13,24 @@ function Countries() {
     }, [])
 
     return (
-        <div className="d-flex flex-wrap">
-            <div className="con">
-                <ul>
-                    {
-                        countries.map((c) => {
-                            return (
-                                <li onClick={() => { setCountriesdetails(c) }}>
-                                    {c.name.common}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+       <div className="d-flex flex-wrap">
+         <ul className="w-50">
+            {
+                countries.map((c) => {
+                    return (
+                        <li>
+                            <Link to='countrydet' state={c}> {c.name.common}</Link>
 
-            </div>
-            <div className="con">
-                <Countriesdetails country={countriesdetails}></Countriesdetails>
-            </div>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+        <div className="w-50">
+            <Outlet></Outlet>
         </div>
+       </div>
+
     )
 }
 export default Countries

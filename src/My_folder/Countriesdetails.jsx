@@ -1,12 +1,18 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-function Countriesdetails({ country }) {
-    console.log(country);
+function Countriesdetails() {
+
+    var det = useLocation() 
+    console.log(det);
+    
     return (
-        <div className="w-100">
-            <h1>{country?.name?.common}</h1>
-            <img src={country?.flags?.png }  />
-
+        <div>
+           <h1>Countries Details:</h1>
+           <h4>Name:{det.state.name.common}</h4>
+           <h4>Capital:{det.state.capital}</h4>
+           <h4>Population:{det.state.population}</h4>
+           <img src={det.state.flags.png}  />
         </div>
     )
 }

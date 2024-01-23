@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Countries from './My_folder/Countries';
+import Countriesdetails from './My_folder/Countriesdetails';
 
 const router = createBrowserRouter([
   {
@@ -18,9 +19,18 @@ const router = createBrowserRouter([
       {
         path: "/countries",
         element: <Countries></Countries>,
+        children:[
+          {
+            path: "countrydet",
+            element: <Countriesdetails></Countriesdetails>,
+          },
+        ]
       },
     ]
+    
   },
+ 
+ 
   
 ]);
 

@@ -5,11 +5,17 @@ import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='con'>
+   <div>
+     <div>
       <h1>Well come to Countries</h1>
       <Link to='/countries'>Countries</Link>
       <Outlet></Outlet>
     </div>
+    <div>
+    
+    </div>
+   </div>
+    
   );
 }
 
