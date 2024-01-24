@@ -2,18 +2,8 @@ import { useFormik } from "formik";
 import React from "react";
 import * as Yup from 'yup'
 
-function checkForm(values){
-    var error={};
-    if(!values.firstname){
-        error.firstname = 'firstname is mandatory'
-    }
-    if(!values.mail){
-        error.mail = 'Enter your mail id'
-    }
-    return error 
-}
 
-function Studentregistration() {
+function StudentregistrationYup() {
 
     const formik = useFormik({
         initialValues: {
@@ -23,12 +13,10 @@ function Studentregistration() {
             number: ''
         },
 
-         validate:checkForm,
-
-        // validationSchema:Yup.object({
-        //     firstname:Yup.string().max(8,'name is too big').min(3,'name is too small').required(),
-        //     lastname:Yup.string().max(8,'name is too big').min(3,'name is too small').required()
-        // }),
+        validationSchema:Yup.object({
+            firstname:Yup.string().max(8,'name is too big').min(3,'name is too small').required(),
+            lastname:Yup.string().max(8,'name is too big').min(3,'name is too small').required()
+        }),
 
         onSubmit: (values) => {
             console.log(values);
@@ -38,7 +26,7 @@ function Studentregistration() {
     console.log(formik);
     return (
         <div className="border m-3 p-3 rounded bg-light">
-            <h1>Students Details</h1>
+            <h1>Students Details with Yup</h1>
             <form onSubmit={formik.handleSubmit}>
                 <div className="form-floating mb-3">
                     <input className="form-control" id="fn" type="text"  name="firstname" placeholder="fn" onChange={formik.handleChange} onBlur={formik.handleBlur} />
@@ -65,4 +53,4 @@ function Studentregistration() {
         </div>
     )
 }
-export default Studentregistration
+export default StudentregistrationYup
