@@ -29,7 +29,7 @@ function StudentDetails() {
 
     return (
         <div>
-            <form onSubmit={formik.handleSubmit} className="w-25 text-center bg-light rounded p-3">
+            <form onSubmit={formik.handleSubmit} className="w-25 text-center bg-light rounded shadow p-3">
                 <h1>Login Form</h1>
                 <div className="form-floating mb-3">
                     <input className={formik.touched.firstname&& formik.errors.firstname?('form-control is-invalid'):('form-control')} type="text" name="firstname" id="fn" placeholder="firstname" onChange={formik.handleChange} onBlur={formik.handleBlur}/>
