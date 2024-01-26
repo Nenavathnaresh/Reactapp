@@ -5,7 +5,7 @@ const initialState = {
 }
 
 const TodoReducer = (state=initialState,action)=>{
-    
+    if()
     return state
 }
 
