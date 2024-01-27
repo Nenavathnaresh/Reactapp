@@ -1,0 +1,14 @@
+{
+  "Users": [
+    {
+      "id": "01d2",
+      "firstname": "Nenavath",
+      "lastname": "Naresh",
+      "gender": "male",
+      "email": "nenavathnaresh460@gmail.com",
+      "password": "fghjkD@14",
+      "DateOfBirth": "2024-01-09",
+      "phone": "8184829256"
+    }
+  ]
+}
