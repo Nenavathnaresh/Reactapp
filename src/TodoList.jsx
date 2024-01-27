@@ -22,7 +22,8 @@ function TodoList(props){
         <div>
             <h1>Todo List</h1>
             <input type="text" onKeyUp={(e)=>{handleInput(e.target.value)}} ref={inp} />
-            <button onClick={()=>{handleAddtodo()}}>Add Task</button>
+           { !props.isUpdate && <button onClick={()=>{handleAddtodo()}}>Add Task</button>}
+          { props.isUpdate &&<button>Update</button>}
             <div>
                 <ul>
                     {
@@ -48,6 +49,7 @@ function MapDispatchToProps(dispatch){
         addtodo:()=>{dispatch({type:'ADD_TODO'})},
         delete:(ind)=>{dispatch({type:'DELETE', index:ind})},
         done:(ind)=>{dispatch({type:'DONE', index:ind})},
+        edit:(ind)=>{dispatch({type:'EDIT', index:ind})}
     }
 }
 export default connect(MapsStateToProps, MapDispatchToProps)(TodoList)

@@ -3,11 +3,14 @@ const initialState = {
     newTodo :{
         task : '',
         isStatus:false,
-    }
+    },
+    isUpdate:false,
+    selectedIndInd:null,
     
 }
 
 const TodoReducer = (state=initialState,action)=>{
+    console.log('action::',action);
     if(action.type === 'UPDATE_TODO'){
         return {...state,newTodo:{task:action.payload,isStatus:false}}
     }
@@ -25,7 +28,7 @@ const TodoReducer = (state=initialState,action)=>{
         return {...state, todos:[...temp]}
     }
     if(action.type === 'EDIT'){
-        
+        return{...state,isUpdate:true,selectedInd:action.index}
     }
     return state
 }
