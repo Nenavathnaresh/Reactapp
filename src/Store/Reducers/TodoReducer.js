@@ -5,7 +5,7 @@ const initialState = {
         isStatus:false,
     },
     isUpdate:false,
-    selectedIndInd:null,
+    selectedInd:null,
     
 }
 
@@ -28,7 +28,13 @@ const TodoReducer = (state=initialState,action)=>{
         return {...state, todos:[...temp]}
     }
     if(action.type === 'EDIT'){
+
         return{...state,isUpdate:true,selectedInd:action.index}
+    }
+    if(action.type === 'UPDATE'){
+        const temp = [...state.todos]
+        temp[state.selectedInd].task = state.newTodo.task
+        return{...state,todos:[...temp],isUpdate:false}
     }
     return state
 }
