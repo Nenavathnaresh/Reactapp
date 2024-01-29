@@ -3,10 +3,10 @@
     {
       "id": "01d2",
       "firstname": "Nenavath",
-      "lastname": "Naresh",
+      "lastname": "Naresh Na",
       "gender": "male",
       "email": "nenavathnaresh460@gmail.com",
-      "password": "fghjkD@14",
+      "password": "Naresh@1252",
       "DateOfBirth": "2024-01-09",
       "phone": "8184829256"
     },
@@ -19,6 +19,26 @@
       "password": "Suresh@1252",
       "DateOfBirth": "2024-01-19",
       "phone": "9666554442"
+    },
+    {
+      "id": "482c",
+      "firstname": "Divya",
+      "lastname": "Nenavath",
+      "gender": "female",
+      "email": "divya@gmail.com",
+      "password": "Divya@123",
+      "DateOfBirth": "2024-01-03",
+      "phone": "9666654222"
+    },
+    {
+      "id": "42bb",
+      "firstname": "Shy",
+      "lastname": "Gupta",
+      "gender": "female",
+      "email": "shy@gmail.com",
+      "password": "Shy@1325",
+      "DateOfBirth": "2024-01-25",
+      "phone": "9948844146"
     }
   ]
 }
