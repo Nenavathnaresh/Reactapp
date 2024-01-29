@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    children:[
+    children: [
       {
         path: "/home",
         element: <Home></Home>,
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/countries",
         element: <Country></Country>,
-        children:[
+        children: [
           {
             path: "countrydet/:cname",
             element: <Countrydet></Countrydet>,
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
-        children:[
+        children: [
           {
             path: "hardware",
             element: <Hardware></Hardware>,
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       },
     ]
   },
- 
+
 ]);
 
 
