@@ -91,7 +91,7 @@ function RegistrationForm(props) {
                 </div>
             </form>
             <div className="text-end">
-                <b>Existing user ?</b><button className="btn btn-outline-success ms-2" onClick={()=>{Navigate('/login')}}>Login</button>
+                <b>Existing user ?</b><button className="btn btn-outline-success ms-2" onClick={()=>{Navigate('/')}}>Login</button>
             </div>
         </div>
     )

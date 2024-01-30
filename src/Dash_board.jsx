@@ -9,10 +9,10 @@ function Dashboard(props) {
         <div>
             <div className="w-50 h-25 text-center bg-success shadow rounded m-auto p-3 m-2">
                 <h1>Wellcome to Dashboard </h1>
-                <h1>{props.login[0].firstname} {props.login[0].lastname}</h1>
+                <h1>{props.login.firstname} {props.login.lastname}</h1>
             </div>
             <div>
-                <button onClick={() => { Navigate('profile') }}>My Profile</button>
+                {/* <button onClick={() => { Navigate('profile') }}>My Profile</button> */}
             </div>
             <div>
             <Outlet></Outlet>

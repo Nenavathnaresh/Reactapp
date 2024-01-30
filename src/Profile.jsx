@@ -11,26 +11,26 @@ function Profile(props){
             <h1>Wellcome to Profile</h1>
             <div className="shadow w-50 text-center p-3 rounded">
             <div className="d-flex flex-wrap">
-            <h3 className="ms-5">{props.login[0].firstname} {props.login[0].lastname}</h3>
+            <h3 className="ms-5">{props.login.firstname} {props.login.lastname}<i class="bi bi-person-circle p-1"></i></h3>
             <button className="ms-auto btn btn-danger" onClick={()=>{Navigate('/dashboard/editpro')}}>Edit Profile</button>
             </div>
 
                 <table className="w-100">
                     <tr>
                         <td>Email:</td>
-                        <td>{props.login[0].email}</td>
+                        <td>{props.login.email}</td>
                     </tr>
                     <tr>
                         <td>Gender:</td>
-                        <td>{props.login[0].gender}</td>
+                        <td>{props.login.gender}</td>
                     </tr>
                     <tr>
                         <td>Date Of Birth:</td>
-                        <td>{props.login[0].DateOfBirth}</td>
+                        <td>{props.login.DateOfBirth}</td>
                     </tr>
                     <tr>
                         <td>Phone Number:</td>
-                        <td>{props.login[0].phone}</td>
+                        <td>{props.login.phone}</td>
                     </tr>
                    
                 </table>

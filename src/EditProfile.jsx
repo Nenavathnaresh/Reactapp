@@ -9,11 +9,12 @@ import { actupdate } from "./actionCreators";
 function Editpro(props) {
 
     const userDetails = React.useRef()
+    const Navigate = useNavigate()
 
     console.log('edit::', props);
 
     const userFormik = useFormik({
-        initialValues: props.login[0],
+        initialValues: props.login,
 
         validationSchema: Yup.object({
             firstname: Yup.string().required('*First Name is required field').min(3, 'Too short!').max(50, 'Too long!'),
@@ -28,7 +29,7 @@ function Editpro(props) {
         onSubmit: (values) => {
             console.log('Edval::', values);
             props.update(values)
-          
+            Navigate('/dashboard/profile')
             // userDetails.current.reset()
             // userFormik.handleReset()
         }

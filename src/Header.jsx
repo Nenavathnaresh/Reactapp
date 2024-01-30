@@ -19,7 +19,7 @@ function Header(props) {
                {!props.isLogin && <button className="btn " onClick={() => { Navigate('/login') }}>Login</button>}
                {!props.isLogin && <button className="btn" onClick={() => { Navigate('/register') }}>Register</button>}
                 {props.isLogin && <button className="btn" onClick={()=>{props.singOut(Navigate)}}>Sign Out</button>}
-                {/* {props.isLogin && <button className="btn" onClick={()=>{Navigate('/profile')}}>My Profile</button>} */}
+                {props.isLogin && <button className="btn" onClick={()=>{Navigate('/dashboard/profile')}}>My Profile<i class="bi bi-person-circle p-1"></i></button>}
             </div>
 
         </nav>
