@@ -11,7 +11,7 @@ function Editpro(props) {
     const userDetails = React.useRef()
     const Navigate = useNavigate()
 
-    console.log('edit::', props);
+    // console.log('edit::', props);
 
     const userFormik = useFormik({
         initialValues: props.login,

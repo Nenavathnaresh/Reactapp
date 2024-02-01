@@ -27,7 +27,7 @@ function Login(props) {
         }
 
     })
-    console.log(loginFormik);
+    // console.log(loginFormik);
     return (
         <div className="w-50 m-auto border border-3 border-black rounded p-3 ">
             <form onSubmit={loginFormik.handleSubmit} className="">
@@ -49,7 +49,7 @@ function Login(props) {
                     <button className="btn bg-primary w-25" type="submit">Login</button>
                 </div>
                 <div className="p-2 me-0 text-end">
-                    <b >Don't have an account? <button onClick={() => { Navigate('/register') }} className="btn btn-outline-success">Sign In</button></b>
+                    <b >Don't have an account? <button onClick={() => { Navigate('/register') }} className="btn btn-outline-success">Create Account</button></b>
                 </div>
             </form>
         </div>

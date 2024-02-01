@@ -12,6 +12,8 @@ import LoginForm from './LoginForm';
 import Dashboard from './Dash_board';
 import Profile from './Profile';
 import EditPro from './EditProfile';
+import Products from './Products';
+import CartItems from './CartItems';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +39,15 @@ const router = createBrowserRouter([
           {
             path: "editpro",
             element: <EditPro></EditPro>,
-          }
+          },
+          {
+            path: "/dashboard",
+            element: <Products></Products>,
+          },
+          {
+            path: "cart",
+            element: <CartItems></CartItems>,
+          },
         ]
       },
     ]

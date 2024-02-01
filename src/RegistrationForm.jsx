@@ -11,12 +11,14 @@ function RegistrationForm(props) {
 
     const userDetails = React.useRef()
 
-    console.log('props::', props);
+    // console.log('props::', props);
+
     const Navigate = useNavigate()
     const userFormik = useFormik({
         initialValues: {
             firstname: '',
             lastname: '',
+            cart:[],
             gender: '',
             email: '',
             password: '',
