@@ -11,7 +11,7 @@ function Todolist() {
     const dispatch = useDispatch()
 
     return (
-        <div>
+        <div className="border border-5 m-2 p-2 border-danger">
             <h1>Todolist</h1>
             <input type="text" ref={inp} onChange={(e) => { dispatch(newtodo(e.target.value)) }} />
            {!todos.isupdate && <button onClick={() => { dispatch(addtodo()) }}>Add todo</button>}
