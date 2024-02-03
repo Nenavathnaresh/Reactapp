@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import Employees from './features/employees/employees';
 import AddEmployee from './features/employees/AddEmployee';
+import UpdateEmp from './features/employees/UpdateEmployee';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +21,22 @@ const router = createBrowserRouter([
       {
         path: "/employees",
         element: <Employees></Employees>,
+        // children:[
+        //   {
+        //     path: "employees/update",
+        //     element: <UpdateEmp></UpdateEmp>,
+        //   },
+        // ]
       },
       {
         path: "/addemployee",
         element: <AddEmployee></AddEmployee>,
       },
+      {
+        path: "/update/:cid",
+        element: <UpdateEmp></UpdateEmp>,
+      },
+      
     ]
   },
 ]);

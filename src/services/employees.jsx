@@ -9,18 +9,45 @@ export const employeesApi = createApi({
     getAllEmployees: builder.query({
       query: () => ``,
     }),
-    addNewEmployee:builder.mutation({
-      query :(newEmp)=>{
-        return{
+    addNewEmployee: builder.mutation({
+      query: (newEmp) => {
+        return {
           url: "",
           method: 'POST',
           body: newEmp,
         }
       }
     }),
+    deleteEmployee: builder.mutation({
+      query: (id) => {
+        return {
+          url: `/${id}`,
+          method: "DELETE",
+        }
+      }
+    }),
+    updateEmployee: builder.mutation({
+      query: (upemp) => {
+        return {
+          url: `/${upemp.id}`,
+          method: "PUT",
+          body: upemp,
+        }
+      }
+    }),
+    getDetails: builder.query({
+      query: (id) => `/${id}`,
+    })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetAllEmployeesQuery,useAddNewEmployeeMutation } = employeesApi
+export const { useGetAllEmployeesQuery,
+  useAddNewEmployeeMutation,
+  useDeleteEmployeeMutation,
+  useUpdateEmployeeMutation,
+  useGetDetailsQuery,
+  useLazyGetAllEmployeesQuery,
+  
+} = employeesApi

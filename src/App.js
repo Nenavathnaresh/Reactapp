@@ -6,8 +6,7 @@ function App() {
   return (
     <div>
       <div>
-        <h1>App</h1>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg don bg-danger">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Edupoly</a>
 
@@ -16,9 +15,12 @@ function App() {
                 <li class="nav-item">
                  <Link to='/employees'>Employees</Link>
                 </li> &nbsp; &nbsp;
-                <li class="nav-item">
+                <li class="nav-item ">
                  <Link to='/addemployee'>AddEmployee</Link>
                 </li>
+                {/* <li class="nav-item">
+                 <Link to='/update'>AddEmployee</Link>
+                </li> */}
               </ul>
             </div>
           </div>
