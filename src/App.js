@@ -12,8 +12,6 @@ function App() {
     <Provider store={store}>
       <div>
         <Header></Header>
-        {/* <LoginForm></LoginForm> */} 
-        {/* <RegistrationForm></RegistrationForm> */}
       </div>
       <div>
         <Outlet></Outlet>
