@@ -1,0 +1,11 @@
+.grad{
+    background: linear-gradient(to right, rgb(61, 61, 243), rgb(175, 53, 53),green);
+}
+.selT{
+    background-color: rgb(21, 167, 21);
+    box-shadow: 5px 5px 10px 10px;
+}
+.selF{
+    background-color: orange;
+    box-shadow: 5px 5px 10px 10px;
+}

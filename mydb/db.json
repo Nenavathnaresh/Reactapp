@@ -1,199 +1,58 @@
 {
-  "Users": [
+  "players": [
     {
-      "id": "01d2",
-      "firstname": "Nenavath",
-      "lastname": "Naresh N",
-      "gender": "male",
-      "email": "nenavathnaresh460@gmail.com",
-      "password": "Naresh@1252",
-      "DateOfBirth": "2024-01-09",
-      "phone": "8184829256",
-      "cart": [
-        {
-          "id": 2,
-          "title": "Mens Casual Premium Slim Fit T-Shirts ",
-          "price": 22.3,
-          "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-          "rating": {
-            "rate": 4.1,
-            "count": 259
-          },
-          "incart": true,
-          "cartcount": 5
-        },
-        {
-          "id": 3,
-          "title": "Mens Cotton Jacket",
-          "price": 55.99,
-          "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-          "rating": {
-            "rate": 4.7,
-            "count": 500
-          },
-          "incart": true,
-          "cartcount": 7
-        },
-        {
-          "id": 1,
-          "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-          "price": 109.95,
-          "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-          "rating": {
-            "rate": 3.9,
-            "count": 120
-          },
-          "incart": false,
-          "cartcount": 1
-        },
-        {
-          "id": 4,
-          "title": "Mens Casual Slim Fit",
-          "price": 15.99,
-          "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-          "rating": {
-            "rate": 2.1,
-            "count": 430
-          },
-          "incart": false,
-          "cartcount": 1
-        }
-      ]
+      "id": "1",
+      "isSelected": true
     },
     {
-      "id": "0f16",
-      "firstname": "Nenavath ",
-      "lastname": "Suresh",
-      "gender": "male",
-      "email": "suresh@gmail.com",
-      "password": "Suresh@1252",
-      "DateOfBirth": "2024-01-19",
-      "phone": "9666554442",
-      "cart": [
-        {
-          "id": 3,
-          "title": "Mens Cotton Jacket",
-          "price": 55.99,
-          "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-          "rating": {
-            "rate": 4.7,
-            "count": 500
-          },
-          "incart": true,
-          "cartcount": 1
-        },
-        {
-          "id": 4,
-          "title": "Mens Casual Slim Fit",
-          "price": 15.99,
-          "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-          "rating": {
-            "rate": 2.1,
-            "count": 430
-          },
-          "incart": true,
-          "cartcount": 3
-        }
-      ]
+      "id": "2",
+      "isSelected": false
     },
     {
-      "id": "482c",
-      "firstname": "Divya",
-      "lastname": "Nenavath",
-      "gender": "female",
-      "email": "divya@gmail.com",
-      "password": "Divya@123",
-      "DateOfBirth": "2024-01-03",
-      "phone": "9666654222",
-      "cart": []
+      "id": "3",
+      "isSelected": false
     },
     {
-      "id": "42bb",
-      "firstname": "Shy",
-      "lastname": "Gupta",
-      "gender": "female",
-      "email": "shy@gmail.com",
-      "password": "Shy@1325",
-      "DateOfBirth": "2024-01-25",
-      "phone": "9948844146",
-      "cart": []
+      "id": "4",
+      "isSelected": true
     },
     {
-      "id": "4f16",
-      "firstname": "Dholi",
-      "lastname": "nenavath",
-      "cart": [],
-      "gender": "female",
-      "email": "dholi@123",
-      "password": "Dholi@123",
-      "DateOfBirth": "2024-01-04",
-      "phone": "8184829256"
+      "id": "5",
+      "isSelected": false
     },
     {
-      "id": "fa4d",
-      "firstname": "sanjeeth singh",
-      "lastname": "Thakur",
-      "cart": [
-        {
-          "id": 3,
-          "title": "Mens Cotton Jacket",
-          "price": 55.99,
-          "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-          "rating": {
-            "rate": 4.7,
-            "count": 500
-          },
-          "incart": true,
-          "cartcount": 1
-        },
-        {
-          "id": 4,
-          "title": "Mens Casual Slim Fit",
-          "price": 15.99,
-          "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-          "category": "men's clothing",
-          "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-          "rating": {
-            "rate": 2.1,
-            "count": 430
-          },
-          "incart": true,
-          "cartcount": 1
-        },
-        {
-          "id": 6,
-          "title": "Solid Gold Petite Micropave ",
-          "price": 168,
-          "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-          "category": "jewelery",
-          "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-          "rating": {
-            "rate": 3.9,
-            "count": 70
-          },
-          "incart": false,
-          "cartcount": 1
-        }
-      ],
-      "gender": "male",
-      "email": "sanjeethsinghthakur0090@gmail.com",
-      "password": "S@njeeth009",
-      "DateOfBirth": "2001-10-04",
-      "phone": "8186992739"
+      "id": "6",
+      "isSelected": false
+    },
+    {
+      "id": "7",
+      "isSelected": false
+    },
+    {
+      "id": "8",
+      "isSelected": false
+    },
+    {
+      "id": "9",
+      "isSelected": false
+    },
+    {
+      "id": "10",
+      "isSelected": false
+    },
+    {
+      "id": "11",
+      "isSelected": false
+    }
+  ],
+  "selectedPlayers": [
+    {
+      "id": "1",
+      "isSelected": true
+    },
+    {
+      "id": "4",
+      "isSelected": true
     }
   ]
 }
