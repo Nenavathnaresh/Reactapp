@@ -1,6 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { jsonServerApi } from "../servises/jsonServer";
+import { setupListeners } from '@reduxjs/toolkit/query'
 
 
 export const store = configureStore({
-    reducer:{},
+    reducer: {
+        [jsonServerApi.reducerPath]: jsonServerApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(jsonServerApi.middleware),
 })
+setupListeners(store.dispatch)

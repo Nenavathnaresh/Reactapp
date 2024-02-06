@@ -1,8 +1,11 @@
 import { useFormik } from "formik";
 import * as Yup from 'yup'
 import React from "react";
+import { useAddNewUsersMutation } from "./servises/jsonServer";
 
 function RegistrationForm() {
+
+    const [adduser] = useAddNewUsersMutation()
 
     const userFormik = useFormik({
         initialValues: {
@@ -28,6 +31,7 @@ function RegistrationForm() {
 
         onSubmit: (values) => {
             console.log('values::', values);
+            adduser(values)
         }
 
     })
