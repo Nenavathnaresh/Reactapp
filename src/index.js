@@ -9,8 +9,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import RegistrationForm from './RegistrationForm';
-import Login from './LoginForm'
+import RegistrationForm from './features/registation/RegistrationForm';
+import Login from './features/registation/LoginForm'
+import Products from './features/products/products';
+import Dashboard from './features/dashboard/dashboard';
+import Profile from './features/registation/Profile';
+import Edit from './features/registation/Edit';
+import CartItems from './features/products/CartItems';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +27,34 @@ const router = createBrowserRouter([
         element: <RegistrationForm></RegistrationForm>,
       },
       {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
+        children:[
+          {
+            path: "/dashboard/profile",
+            element: <Profile></Profile>,
+          },
+          {
+            path: "/dashboard",
+            element: <Products></Products> ,
+          },
+          {
+            path: "/dashboard/edit",
+            element: <Edit></Edit>,
+          },
+          {
+            path: "/dashboard/cartitems",
+            element: <CartItems></CartItems>,
+          },
+        ]
+      },
+      {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/",
+        element: <Products></Products> ,
       },
     ]
   },

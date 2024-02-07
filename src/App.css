@@ -1,0 +1,27 @@
+ul li {
+    width: 22%;
+    list-style: none;
+  } 
+  .img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+  }
+  .pbtn:hover{
+    background-color: rgb(15, 233, 160);
+    width: 75%;
+}   
+.bgm{
+    background-color: #c5aa6a;
+}
+
+
+.badge{
+  font-size: 12px;
+}
+.txt{
+  font-size: 100px;
+  color: orange;
+}
+Link{
+  text-decoration: none;
+}
