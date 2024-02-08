@@ -66,7 +66,7 @@ function CartItems() {
     }
     else {
         return (
-            <div className="d-flex flex-wrap ">
+            <div className="d-flex flex-wrap profile ">
                 <div className="w-50" >
                     {
                         cartitems?.map((product, ind) => {

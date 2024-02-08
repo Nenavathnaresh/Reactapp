@@ -14,19 +14,27 @@ function App() {
 
   const nav = useNavigate()
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bgm sticky-top top-0 align-items-center">
+    <div className=' '>
+      <nav class="navbar navbar-expand-lg navbar-light bg-secondary sticky-top top-0 align-items-center">
 
 
         <div class="collapse navbar-collapse w-100">
 
           <ul class="navbar-nav me-auto  align-items-center">
-            <li class="nav-item active">
+           {!loginDet.length > 0 && <li class="nav-item active ms-2">
               <Link className='text-decoration-none text-black' to='/'>Home</Link>
-            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           {loginDet.length > 0 && <li class="nav-item">
+              <Link className='text-decoration-none text-black' to='/dashboard'>Home</Link>
+            </li>}  &nbsp;&nbsp;&nbsp;
+           
             <li class="nav-item">
-              <Link className='text-decoration-none text-black' to='/dashboard'>Dashboard</Link>
-            </li>  &nbsp;&nbsp;&nbsp;
+              <a className='text-decoration-none text-black' href='#footer'>Contact</a>
+            </li>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            <li class="nav-item">
+              <Link className='text-decoration-none text-black' to='#'>AboutUs</Link>
+            </li> &nbsp;&nbsp;&nbsp;
            
           </ul>
           <div>
@@ -42,8 +50,8 @@ function App() {
             {loginDet.length > 0 && <li class="nav-item">
               <Link className='text-decoration-none text-black' to='/dashboard/profile'>MyProfile</Link>
             </li>} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <li>
-              <h3 onClick={() => { nav('/dashboard/cartitems') }} className='position-relative me-1'><i class="bi bi-cart4"></i><span className='position-absolute rounded-pill top-0 end-0 badge bg-danger'>{loginDet[0]?.cart?.length}</span></h3>
+            <li className='me-2'>
+              <h3 onClick={() => {loginDet.length > 0 ? nav('/dashboard/cartitems') : nav('/login')}} className='position-relative me-1'><i class="bi bi-cart4"></i><span className='position-absolute rounded-pill top-0 end-0 badge bg-danger'>{loginDet[0]?.cart?.length}</span></h3>
             </li>
 
           </ul>

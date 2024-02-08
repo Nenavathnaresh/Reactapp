@@ -25,3 +25,16 @@ ul li {
 Link{
   text-decoration: none;
 }
+.bgm{
+  background-color: rgb(240, 188, 152);
+}
+.profile{
+  background-image: url('https://i.pinimg.com/736x/69/29/24/6929247e9a984705ceb18f5bdff4bbdd.jpg');
+}
+.h{
+  height: 150px;
+  background-color: cadetblue;
+}
+.reg{
+  background-image: url('https://img.freepik.com/free-photo/abstract-luxury-blur-grey-color-gradient-used-as-background-studio-wall-display-your-products_1258-54646.jpg');
+}

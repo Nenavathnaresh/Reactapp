@@ -41,7 +41,7 @@ function RegistrationForm() {
     })
     console.log('formik::', userFormik);
     return (
-        <div className="w-50 m-auto border border-3 rounded p-3">
+        <div className="w-50 m-auto border border-3 rounded p-3 reg">
             <form onSubmit={userFormik.handleSubmit} ref={userDetails}>
                 <h1 className="text-center">*Registation Form*</h1>
                 <div class="form-floating mb-3">
@@ -49,7 +49,7 @@ function RegistrationForm() {
                     <label for="floatingInput">First Name</label>
                     <div className="text-danger">{userFormik.touched.firstname && userFormik?.errors?.firstname}</div>
                 </div>
-                <div class="form-floating">
+                <div class="form-floating mb-3">
                     <input type="text" class={userFormik.touched.lastname ? (userFormik.errors.lastname ? 'form-control is-invalid' : 'form-control is-valid ') : 'form-control '} id="floatingPassword" placeholder="Password" onChange={userFormik.handleChange} onBlur={userFormik.handleBlur} name="lastname" />
                     <label for="floatingPassword">Last Name</label>
                     <div className="text-danger">{userFormik.touched.lastname &&userFormik?.errors?.lastname}</div>

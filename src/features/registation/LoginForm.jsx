@@ -37,7 +37,7 @@ function Login() {
         }
     })
     return (
-        <div className="w-50 border border-3 p-3 rounded m-auto text-center">
+        <div className="w-50 border border-3 p-3 rounded m-auto text-center reg">
             <h1>Login</h1>
             <form onSubmit={loginFormik.handleSubmit}>
                 <div class="form-floating mb-3">

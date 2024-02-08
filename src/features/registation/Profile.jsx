@@ -7,9 +7,9 @@ function Profile() {
     const logindet = useSelector((store) => { return store.loginDetails.loginDet })
     console.log(logindet);
     return (
-        <div className="text-center">
+        <div className="text-center  ">
             <h1>Wellcome to MyProfile</h1>
-            <div className="w-50 m-auto shadow p-3 rounded ">
+            <div className="w-50 m-auto shadow p-3 rounded profile ">
                 <div className="d-flex flex-wrap justify-content-between">
                     <h3 className="text-center">Name: {logindet[0]?.firstname} {logindet[0]?.lastname}<i class="bi bi-person-circle"></i></h3>
                     <button className="btn btn-danger text-white" ><Link to='/dashboard/edit'>Edit</Link> </button>
